@@ -27,6 +27,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* шаблон-класс для списка, убирает точки */
 .list {
   padding: 0px;
@@ -300,9 +306,9 @@ body {
     
 */
 
-img {
+/* img {
   display: block;
-}
+} */
 
 .services-container {
   display: block;
@@ -498,7 +504,7 @@ cекция Наша команда
 .customers {
   padding-top: 94px;
   padding-bottom: 94px;
-  background-color: var(--background-grey);
+  background-color: var(--text-color-w);
 }
 
 /* 
