@@ -67,13 +67,21 @@ img {
 
 
 .header {
+  display: flex;
   background-color: var(--background-white);
+ 
 }
+
 .link {
   color: #212121;
   text-decoration: none;
   border: 1px solid transparent;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
+
 .link:hover,
 .link:focus {
   outline: none;
@@ -100,19 +108,18 @@ img {
   /* border: 1px solid black; */
 }
 
+
+
 .link-nav-list:not(:last-child) {
   margin-right: 50px;
 }
 
 
-.link-nav-list:nth-child(1) .link {
-  color: var(--accent-collor);
-  padding-bottom: 28px;
 
-}
 
 .link.header {
-  /* display: flex; */
+  position: relative;
+
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -120,6 +127,24 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+}
+
+.active {
+  color: var(--accent-collor);
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: 0;
+  transform: translate(0%, 50%);
+
+  height: 4px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--accent-collor);
 }
 
 .line {
@@ -136,8 +161,8 @@ img {
   display: flex;
   align-items: center;
   margin-left: auto;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  /* margin-top: 32px;
+  margin-bottom: 32px; */
 }
 
 .contacts-nav .contacts-list + .contacts-list {
@@ -164,6 +189,10 @@ img {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .contacts:hover,
@@ -240,6 +269,10 @@ img {
   line-height: 1.88;
   letter-spacing: 0.06em;
   border-radius: 4px;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .link.main:hover,
@@ -339,6 +372,7 @@ img {
   bottom: 0;
   right: 0;
   width: 100%;
+  
 }
 
 .link.services:hover {
@@ -438,27 +472,34 @@ cекция Наша команда
   justify-content: center;
   align-items: center;
 
-  fill: var(--text-color);
+  fill: #AFB1B8;
 
   width: 44px;
   height: 44px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-icon-team {
   fill: currentColor;
+  transition-property: fill, border-radius, background-color ;
+  transition-duration: 20000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-icon-team:hover,
 .link-icon-team:focus {
   outline: none;
-  fill: var(--text-color-w);
+  fill: #FFFFFF;
 }
 
 .team-icon-li:hover,
 .team-icon-li:focus {
   outline: none;
   border-radius: 50%;
-  background-color: var(--accent-collor);
-  fill: var(--text-color-w);
+  background-color: #2196F3;
+  fill: #FFFFFF;
 }
 
 /* 
