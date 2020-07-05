@@ -32,7 +32,9 @@ body {
   text-decoration: none;
   border: 1px solid transparent;
   
-
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -78,7 +80,7 @@ img {
 
 .header {
   background-color: var(--text-color-w);
-  border-bottom: 1px solid #ECECEC;
+  
   /* outline: bottom 1px solid #ECECEC ; */
 }
 
@@ -87,6 +89,7 @@ img {
   align-items: center;
 
   display: flex;
+  
 }
 
 .logo {
@@ -106,7 +109,8 @@ img {
 .link-nav {
   margin-left: 85px;
   display: flex;
-  /* border: 1px solid black; */
+  
+  
 }
 
 .link-nav-list:not(:last-child) {
@@ -179,6 +183,10 @@ img {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts:hover,
@@ -187,6 +195,10 @@ img {
 }
 
 /* Главный контент страницы main */
+
+.main{
+  border-top: 1px solid #ECECEC;
+}
 
 .main-title {
 
@@ -228,12 +240,16 @@ img {
   line-height: 1.63;
   font-weight: 500;
   text-align: center;
+
+  transition-property: color,background-color,box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
   background-color: var(--accent-collor);
   color: #ffffff;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -261,7 +277,10 @@ img {
   color: var(--text-color-w);
   font-size: 18px;
   line-height: 1.56;
-  /* background-color: tomato */
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .examples:hover,
@@ -292,13 +311,17 @@ img {
 
 .clarify-window {
   position: absolute;
+
+  background: rgba(33, 150, 243, 0.9);
+
   width: 100%;
   height: 100%;
-  background: rgba(33, 150, 243, 0.9);
   top: 0;
   left: 0;
   padding: 63px 24px;
   opacity: 0;
+
+  transition-property: opacity, transform;
   transform: translateY(100%);
   transition-duration:250ms;
   transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
@@ -367,6 +390,7 @@ img {
 }
 
 .footer {
+  display: flex;
   background-color: #2f303a;
   padding-bottom: 60px;
 }
@@ -391,6 +415,10 @@ img {
   font-weight: 400;
   text-decoration: none;
   font-style: normal;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-in-footer:hover,
@@ -490,23 +518,26 @@ img {
 
   width: 44px;
   height: 44px;
+  border-radius: 50%;
+
+
+  transition-property: fill,background-color ;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-icon-team {
   fill: currentColor;
+
 }
 
-.link-icon-team:hover,
-.link-icon-team:focus {
-  outline: none;
-  fill: var(--text-color-w);
-}
+
 
 .team-icon-li:hover,
 .team-icon-li:focus {
   outline: none;
-  border-radius: 50%;
+ 
   background-color: var(--accent-collor);
-  fill: var(--text-color-w);
+  
 }
 
 

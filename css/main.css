@@ -79,7 +79,7 @@ img {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
+ 
 }
 
 .link:hover,
@@ -457,7 +457,7 @@ cекция Наша команда
 
 .contacts-team > li {
   display: flex;
-  height: 44px;
+ 
   margin-right: 10px;
   width: 44px;
   height: 44px;
@@ -476,15 +476,17 @@ cекция Наша команда
 
   width: 44px;
   height: 44px;
+  border-radius: 50%;
+  background-color: inherit;
 
-  transition-property: fill;
+  transition-property: fill, background-color ;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-icon-team {
   fill: currentColor;
-  transition-property: fill, border-radius, background-color ;
-  transition-duration: 20000ms;
+  transition-property: fill, background-color ;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -497,7 +499,7 @@ cекция Наша команда
 .team-icon-li:hover,
 .team-icon-li:focus {
   outline: none;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   background-color: #2196F3;
   fill: #FFFFFF;
 }
@@ -521,6 +523,11 @@ cекция Наша команда
   border-radius: 4px;
   color: var(--text-color);
   fill: var(--text-color);
+
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .customer-list {
@@ -569,6 +576,7 @@ Footer
 }
 
 .footer {
+  display: flex;
   background-color: #2f303a;
   padding-bottom: 60px;
 }
@@ -593,13 +601,19 @@ Footer
   font-weight: 400;
   text-decoration: none;
   font-style: normal;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  
 }
 
 .contacts-in-footer:hover,
 .contacts-in-footer:focus {
   outline: none;
   color: var(--accent-collor);
-  /* border: 1px solid var(--accent-collor); */
+  
 }
 
 .contacts-links {
